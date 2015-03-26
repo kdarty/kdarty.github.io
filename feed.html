@@ -21,12 +21,59 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-   <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <style>
+      .card {
+        padding:1.5rem;
+        box-shadow:0 1px 2px #aaa;
+        background:white;
+        margin:0 1rem 1rem;
+        border-radius:3px;
+        user-select:none;
+        animation:fly-in-from-left .5s 1s ease both;
+        transform-origin:top left;
+      }
+      .card:nth-child(even){
+        animation-name:fly-in-from-right;
+        animation-delay:1.1s;
+       transform-origin:top right;
+      }
+      
+      @keyframes fly-in-from-left {
+        from {
+          transform:translateY(15rem) rotate(15deg);
+          opacity:0;
+        }
+      }
+      
+      @keyframes fly-in-from-right {
+        from {
+          transform:translateY(15rem) rotate(-15deg);
+          opacity:0;
+        }
+      }
+      
+      .card:after {
+        position:absolute;
+        font-size:.9rem;
+        top:1.5rem;
+        right:1rem;
+        content:"i";
+        border:thin solid gray;
+        color:gray;
+        width:1rem;
+        line-height:1rem;
+        text-align:center;
+        border-radius:50%;
+        pointer-events:none;
+      }
+
+    </style>
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
-
-    <div class="row">
+       
+     <div class="row">
       <div class="large-12 columns">
         <div class="nav-bar right">
           <ul class="button-group">
@@ -36,70 +83,37 @@
             <li><a href="http://www.linkedin.com/in/kevindarty" class="button">LinkedIn</a></li>
           </ul>
         </div>
-        <h1>Kevin Darty</h1>
+        <h1>Kevin Darty - Social Feed</h1>
         <hr/>
       </div>
     </div>
-    <div class="row">
-      <div class="large-12 columns">
-        <img src="img/Guitar-Banner-1000x500.jpg">
-      </div>
-    </div>
-    <div class="row">
-      <hr>
-      <div class="large-8 columns">
-        <h4>About Me</h4>
-        <p>I'm a C# Developer, Guitar Player, Father, Star Wars Geek, fan of the Mac and Linux. I am Mobile Platform agnostic and appreciate efforts from both Android and iOS. Mobile Development is a passion of mine and sharing good tips and information to help others is something I really enjoy.</p>
-        <i class="fi-social-twitter"></i>
-      </div>
-      <div class="large-4 columns">
-        <img src="img/Kevin-Darty-2014.png">
-      </div>
-    </div>
-    <div class="row">
-      <hr>
-      <div class="large-12 columns">
-        <h4>Where to Find me Online</h4>
-        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
-          <li>
-            <a href="http://www.kevindarty.net" target="_blank">
-            <img data-caption="Programming Blog" src="img/logos/Kevin-Darty-Net-Logo-800x500.jpg" /></a>
-          </li>
-          <li>
-            <a href="http://plus.google.com/+KevinDarty/about" target="_blank">
-            <img data-caption="Google+ Profile" src="img/logos/Google-Plus-Logo-800x500.jpg" /></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/kdarty" target="_blank"><img data-caption="Twitter Profile" src="img/logos/Twitter-Logo-800x500.jpg" /></a>
-          </li>
-          <li>
-            <a href="http://www.linkedin.com/in/kevindarty" target="_blank"><img data-caption="LinkedIn Profile" src="img/logos/LinkedIn-Logo-800x500.jpg" /></a>
-          </li>
-          <li>
-            <a href="https://www.pinterest.com/kdarty71/" target="_blank"><img data-caption="Pinterest Boards" src="img/logos/Pinterest-Logo-800x500.jpg" /></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-<!--
-    <div class="row">
-      <div class="large-12 columns">
-        <hr>
-        <h4>Contact Me</h4>
-        <div class="large-4 columns">
-          Email: <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="214c44614c58514e5355474e4d484e0f424e4c">[email protected]</a><script cf-hash='f9e31' type="text/javascript">
-          /* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script>
+
+     <div class="row">
+      
+         
+        <div class="large-3 columns ">
+          <div class="panel">
+            <a href="https://twitter.com/kdarty" target="_blank"><img src="img/Kevin-Darty-2014.png"/></a>
+            <h5><a href="https://twitter.com/kdarty" target='_blank"'>Kevin Darty</a></h5>
+              <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+            </div>
+     
+          </div>
         </div>
-        <div class="large-4 columns">
-          Twitter: @kdarty
+        
+         
+         
+        <div id="feedContent" class="large-6 columns">
         </div>
-        <div class="large-4 columns">
-          Phone: 555-555-1234
-        </div>
+     
+         
+        <aside class="large-3 columns hide-for-small">
+          <p><img src="img/wisdom-of-jimi-hendrix.jpg"/></p>
+        </aside>
+
       </div>
-    </div>
--->
+     
+ 
     <footer class="row">
       <div class="large-12 columns">
         <hr/>
@@ -125,6 +139,30 @@
     <script src="js/vendor/angular-foundation/mm-foundation-tpls.min.js"></script>
     <script>
     $(document).foundation();
+    
+    $.get("https://script.google.com/macros/s/AKfycby6MeQVasDHQuf__Ar82GRJx3M900SgLvPKhtvI70-Bph927D0/exec", function(data) {
+    var $XML = $(data);
+    var feedHtml;
+    $XML.find("item").each(function() {
+        var $this = $(this),
+            item = {
+                title:       $this.find("title").text(),
+                link:        $this.find("link").text(),
+                description: $this.find("description").text(),
+                pubDate:     $this.find("pubDate").text(),
+                author:      $this.find("author").text()
+            };
+        
+        var pubDate = new Date(item.pubDate);
+        var pubDateString = pubDate.toLocaleDateString() + " " + 
+                            pubDate.toLocaleTimeString();
+
+        feedHtml = "<div class='row card'>" + item.description + 
+          "<p style='text-align: right'>" + pubDateString + "</p></div><br />";
+        $("#feedContent").append(feedHtml);
+        //etc...
+    });
+});
     </script>
   </body>
 </html>
