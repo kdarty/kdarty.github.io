@@ -1,9 +1,14 @@
-<!doctype html>
-<html class="no-js" lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kevin Darty</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Sticy Header and Footer Bootstrap Test Page">
+    <meta name="author" content="Kevin Darty">
+    <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -17,114 +22,151 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-   <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
+
+    <title>Sticky Footer Navbar Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap Theme -->
+    <link href="css/amelia-theme.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <style>
+      #socialLinks div.row img {
+        margin-bottom: 10px;
+      }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
+
   <body>
 
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="nav-bar right">
-          <ul class="button-group">
-            <li><a href="http://www.KevinDarty.net" class="button">blog</a></li>
-            <li><a href="http://plus.google.com/+KevinDarty/about" class="button">google+</a></li>
-            <li><a href="https://twitter.com/kdarty" class="button">twitter</a></li>
-            <li><a href="http://www.linkedin.com/in/kevindarty" class="button">LinkedIn</a></li>
-          </ul>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top custom-navbar" role="navigation">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.kevindarty.com">Kevin Darty</a>
         </div>
-        <h1>Kevin Darty</h1>
-        <hr/>
+        <div id="navbar" class="collapse navbar-collapse navbar-left">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="feed.html">Social Feed</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Social <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="http://www.twitter.com/kdarty">Twitter</a></li>
+                <li><a href="http://plus.google.com/+KevinDarty/about">Google+</a></li>
+                <li><a href="http://www.linkedin.com/in/kevindarty">Linked In</a></li>
+                <li><a href="https://www.pinterest.com/kdarty71">Pinterest</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Blogs</li>
+                <li><a href="http://www.kevindarty.net">Programming Blog</a></li>
+                <li><a href="http://blog.kevindarty.com">Personal Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="jumbotron">
+        <img src="img/Guitar-Banner-1000x500.jpg" style="width: 100%">
+      </div>
+      <hr />
     </div>
-    <div class="row">
-      <div class="large-12 columns">
-        <img src="img/Guitar-Banner-1000x500.jpg">
-      </div>
-    </div>
-    <div class="row">
-      <hr>
-      <div class="large-8 columns">
-        <h4>About Me</h4>
-        <p>I'm a C# Developer, Guitar Player, Father, Star Wars Geek, fan of the Mac and Linux. I am Mobile Platform agnostic and appreciate efforts from both Android and iOS. Mobile Development is a passion of mine and sharing good tips and information to help others is something I really enjoy.</p>
-        <i class="fi-social-twitter"><a href="feed.html">See what I'm up to on Twitter Now</a></i>
-      </div>
-      <div class="large-4 columns">
-        <img src="img/Kevin-Darty-2014.png">
-      </div>
-    </div>
-    <div class="row">
-      <hr>
-      <div class="large-12 columns">
-        <h4>Where to Find me Online</h4>
-        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
-          <li>
-            <a href="http://www.kevindarty.net" target="_blank">
-            <img data-caption="Programming Blog" src="img/logos/Kevin-Darty-Net-Logo-800x500.jpg" /></a>
-          </li>
-          <li>
-            <a href="http://plus.google.com/+KevinDarty/about" target="_blank">
-            <img data-caption="Google+ Profile" src="img/logos/Google-Plus-Logo-800x500.jpg" /></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/kdarty" target="_blank"><img data-caption="Twitter Profile" src="img/logos/Twitter-Logo-800x500.jpg" /></a>
-          </li>
-          <li>
-            <a href="http://www.linkedin.com/in/kevindarty" target="_blank"><img data-caption="LinkedIn Profile" src="img/logos/LinkedIn-Logo-800x500.jpg" /></a>
-          </li>
-          <li>
-            <a href="https://www.pinterest.com/kdarty71/" target="_blank"><img data-caption="Pinterest Boards" src="img/logos/Pinterest-Logo-800x500.jpg" /></a>
-          </li>
-        </ul>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <h4>About Me</h4>
+          <p>I'm a C# Developer, Guitar Player, Father, Star Wars Geek, fan of the Mac and Linux. I am Mobile Platform agnostic and appreciate efforts from both Android and iOS. Mobile Development is a passion of mine and sharing good tips and information to help others is something I really enjoy.</p>
+          <i><a href="feed.html">See what I'm up to on Twitter Now</a></i>
+        </div>
+        <div class="col-sm-5">
+          <img class="img-responsive" src="img/Kevin-Darty-2014.png">
+        </div>
       </div>
     </div>
     
-<!--
-    <div class="row">
-      <div class="large-12 columns">
-        <hr>
-        <h4>Contact Me</h4>
-        <div class="large-4 columns">
-          Email: <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="214c44614c58514e5355474e4d484e0f424e4c">[email protected]</a><script cf-hash='f9e31' type="text/javascript">
-          /* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script>
+    <!-- Social Links -->
+    
+    <div id="socialLinks" class="container">
+      <hr />
+      <div class="col-sm-12">
+        <h4>Where to Find me Online</h4>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <a href="http://www.kevindarty.net" target="_blank">
+            <img class="img-rounded img-responsive" alt="Programming Blog" src="img/logos/Kevin-Darty-Net-Logo-800x500.jpg" width="222" height="142" />
+          </a>
         </div>
-        <div class="large-4 columns">
-          Twitter: @kdarty
+        <div class="col-md-3 col-sm-6">
+          <a href="http://plus.google.com/+KevinDarty/about" target="_blank">
+            <img class="img-rounded img-responsive" alt="Google+ Profile" src="img/logos/Google-Plus-Logo-800x500.jpg" width="222" height="142" />
+          </a>
         </div>
-        <div class="large-4 columns">
-          Phone: 555-555-1234
+        <div class="col-md-3 col-sm-6">
+          <a href="https://twitter.com/kdarty" target="_blank">
+            <img class="img-rounded img-responsive" alt="Twitter Profile" src="img/logos/Twitter-Logo-800x500.jpg" width="222" height="142" />
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="http://www.linkedin.com/in/kevindarty" target="_blank">
+            <img class="img-rounded img-responsive" alt="LinkedIn Profile" src="img/logos/LinkedIn-Logo-800x500.jpg" width="222" height="142" />
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <a href="https://www.pinterest.com/kdarty71/" target="_blank">
+            <img class="img-rounded img-responsive" alt="Pinterest Boards" src="img/logos/Pinterest-Logo-800x500.jpg" width="222" height="142" />
+          </a>
         </div>
       </div>
     </div>
--->
-    <footer class="row">
-      <div class="large-12 columns">
-        <hr/>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>© Copyright 2015 by Kevin Darty</p>
-          </div>
-          <div class="large-6 columns">
-            <ul class="inline-list right">
-              <li><a href="http://www.KevinDarty.net">blog</a></li>
-              <li><a href="http://plus.google.com/+KevinDarty/about">google+</a></li>
-              <li><a href="https://twitter.com/kdarty">twitter</a></li>
-              <li><a href="http://www.linkedin.com/in/kevindarty">LinkedIn</a></li>
-            </ul>
-          </div>
-        </div>
+
+    <footer class="footer">
+      <div class="container">
+        <ul class="bs-docs-footer-links text-muted">
+          <li>© Copyright 2015 by Kevin Darty</li>
+          <li>&middot;</li>
+          <li><a href="http://www.KevinDarty.net">blog</a></li>
+          <li>&middot;</li>
+          <li><a href="http://plus.google.com/+KevinDarty/about">google+</a></li>
+          <li>&middot;</li>
+          <li><a href="https://twitter.com/kdarty">twitter</a></li>
+          <li>&middot;</li>
+          <li><a href="http://www.linkedin.com/in/kevindarty">LinkedIn</a></li>
+        </ul>
       </div>
     </footer>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/vendor/angular/angular.min.js"></script>
-    <script src="js/vendor/angular-foundation/mm-foundation-tpls.min.js"></script>
-    <script>
-    $(document).foundation();
-    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
