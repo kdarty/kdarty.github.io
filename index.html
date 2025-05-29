@@ -27,12 +27,7 @@
 
     <title>Kevin Darty</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
-    <!-- Bootstrap Theme -->
-    <link href="css/amelia-theme.css" rel="stylesheet">
-
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 
@@ -161,8 +156,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script>
+  if (typeof mdc !== 'undefined') {
+    mdc.autoInit();
+  } else {
+    console.warn('MDC components not found. Auto-init skipped.');
+  }
+</script>
   </body>
 </html>

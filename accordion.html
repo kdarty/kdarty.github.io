@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Example of Bootstrap 3 Accordion</title>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
 <style type="text/css">
     .bs-example{
     	margin: 20px;
@@ -54,5 +52,13 @@
         </div>
     </div>
 </div>
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script>
+  if (typeof mdc !== 'undefined') {
+    mdc.autoInit();
+  } else {
+    console.warn('MDC components not found. Auto-init skipped.');
+  }
+</script>
 </body>
 </html>                                		                                		
