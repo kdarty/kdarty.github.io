@@ -20,70 +20,12 @@ body {
 
 /* Custom page CSS
 -------------------------------------------------- */
-/* Not required for template or sticky footer method. */
 
-body > .container {
-  padding: 60px 15px 0;
-}
-.container .text-muted {
-  margin: 20px 0;
-}
-
-.footer > .container {
+.footer > .footer-content-wrapper {
   padding-right: 15px;
   padding-left: 15px;
 }
 
 code {
   font-size: 80%;
-}
-
-.custom-navbar .fa {font-size:25px}
-
-@media (max-width:767px) { 
-    .custom-navbar .navbar-right {
-        float: right;
-        padding-right: 15px;
-    }
-    .custom-navbar .nav.navbar-nav.navbar-right li {
-        float: right;
-    }
-      .custom-navbar .nav.navbar-nav.navbar-right li > a {
-        padding:8px 5px;
-    }
-    .custom-navbar .navbar-toggle {
-        float: left
-    }
-    .custom-navbar .navbar-header {
-        float: left;
-        width: auto!important;
-    }
-    .custom-navbar .navbar-collapse {
-        clear: both;
-        float: none;
-    }
-}
-
-.bs-docs-footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-top: 100px;
-    color: #767676;
-    text-align: center;
-    border-top: 1px solid #e5e5e5;
-}
-.bs-docs-footer-links {
-    padding-left: 0;
-    margin-top: 20px;
-}
-.bs-docs-footer-links li {
-    display: inline;
-    padding: 0 2px;
-}
-.bs-docs-footer-links li:first-child {
-    padding-left: 0;
-}
-@media (min-width:768px) {
-    .bs-docs-footer p {
-    margin-bottom: 0;
 }

@@ -30,12 +30,7 @@
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
-
-    <style>
-      #socialLinks div img {
-        margin-bottom: 10px;
-      }
-    </style>
+    <link href="css/site.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -45,98 +40,71 @@
   </head>
 
   <body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top custom-navbar" role="navigation">
-      <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="navbar-header">
-          <a class="navbar-brand" href="http://www.kevindarty.com">Kevin Darty</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse navbar-left">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Social <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="https://bsky.app/profile/kdarty.bsky.social">Bluesky</a></li>
-                <li><a href="https://hachyderm.io/@kdarty">Mastodon</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
+    <mwc-top-app-bar-fixed>
+      <div slot="title">
+        <a href="http://www.kevindarty.com" style="color: white; text-decoration: none;">Kevin Darty</a>
       </div>
-    </nav>
-
+      <div slot="actionItems">
+        <a href="index.html" style="color: white; text-decoration: none;">
+          <mwc-icon-button icon="home" title="Home"></mwc-icon-button>
+        </a>
+        <mwc-icon-button icon="public" title="Social" id="socialMenuButton"></mwc-icon-button>
+      </div>
+      <div>
+        <!-- Main content will be pushed down by the fixed app bar -->
+      </div>
+    </mwc-top-app-bar-fixed>
+    <mwc-menu id="socialMenu" anchor="socialMenuButton">
+      <mwc-list-item><a href="https://bsky.app/profile/kdarty.bsky.social" target="_blank" style="text-decoration: none; color: inherit;">Bluesky</a></mwc-list-item>
+      <mwc-list-item><a href="https://hachyderm.io/@kdarty" target="_blank" style="text-decoration: none; color: inherit;">Mastodon</a></mwc-list-item>
+    </mwc-menu>
     <!-- Begin page content -->
-    <div class="container">
-      <div class="jumbotron">
-        <img src="img/Guitar-Banner-1000x500.jpg" style="width: 100%">
-      </div>
+    <div class="main-content-wrapper">
+      <img class="banner-image responsive-img" src="img/Guitar-Banner-1000x500.jpg" style="width: 100%" alt="Guitar Banner">
       <hr />
-    </div>
     
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-7">
-          <h4>About Me</h4>
-          <p>I'm a C# Developer, Guitar Player, Father, Star Wars Geek, fan of the Mac and Linux. I am Mobile Platform agnostic and appreciate efforts from both Android and iOS. Mobile Development is a passion of mine and sharing good tips and information to help others is something I really enjoy.</p>
-        </div>
-        <div class="col-sm-5">
-          <img class="img-responsive" src="img/Kevin-Darty-2014.png">
-        </div>
+    <div class="about-me-section">
+      <div class="about-me-text">
+        <h4>About Me</h4>
+        <p>I'm a C# Developer, Guitar Player, Father, Star Wars Geek, fan of the Mac and Linux. I am Mobile Platform agnostic and appreciate efforts from both Android and iOS. Mobile Development is a passion of mine and sharing good tips and information to help others is something I really enjoy.</p>
+      </div>
+      <div class="about-me-image">
+        <img class="responsive-img" src="img/Kevin-Darty-2014.png" alt="Kevin Darty profile picture">
       </div>
     </div>
     
     <!-- Social Links -->
-    
-    <div id="socialLinks" class="container">
+    <div id="socialLinks">
       <hr />
-      <div class="col-md-12">
+      <div class="social-links-header">
         <h4>Where to Find me Online</h4>
       </div>
-      <div class="col-md-3 col-xs-6">
-        <a href="http://www.kevindarty.net" target="_blank">
-          <img class="img-rounded img-responsive" alt="Programming Blog" src="img/logos/Kevin-Darty-Net-Logo-800x500.jpg" width="222" height="142" />
-        </a>
-      </div>
-      <div class="col-md-3 col-xs-6">
-        <a href="http://plus.google.com/+KevinDarty/about" target="_blank">
-          <img class="img-rounded img-responsive" alt="Google+ Profile" src="img/logos/Google-Plus-Logo-800x500.jpg" width="222" height="142" />
-        </a>
-      </div>
-      <div class="col-md-3 col-xs-6">
-        <a href="https://twitter.com/kdarty" target="_blank">
-          <img class="img-rounded img-responsive" alt="Twitter Profile" src="img/logos/Twitter-Logo-800x500.jpg" width="222" height="142" />
-        </a>
-      </div>
-      <div class="col-md-3 col-xs-6">
-        <a href="http://www.linkedin.com/in/kevindarty" target="_blank">
-          <img class="img-rounded img-responsive" alt="LinkedIn Profile" src="img/logos/LinkedIn-Logo-800x500.jpg" width="222" height="142" />
-        </a>
-      </div>
-      <div class="col-md-12 col-xs-6">
-        <a href="https://www.pinterest.com/kdarty71/" target="_blank">
-          <img class="img-rounded img-responsive" alt="Pinterest Boards" src="img/logos/Pinterest-Logo-800x500.jpg" width="222" height="142" />
-        </a>
+      <div class="social-links-grid">
+        <div class="social-link-item">
+          <a href="http://www.kevindarty.net" target="_blank">
+            <img class="responsive-img social-link-img" alt="Programming Blog" src="img/logos/Kevin-Darty-Net-Logo-800x500.jpg" />
+          </a>
+        </div>
+        <div class="social-link-item">
+          <a href="http://www.linkedin.com/in/kevindarty" target="_blank">
+            <img class="responsive-img social-link-img" alt="LinkedIn Profile" src="img/logos/LinkedIn-Logo-800x500.jpg" />
+          </a>
+        </div>
+        <div class="social-link-item">
+          <a href="https://www.pinterest.com/kdarty71/" target="_blank">
+            <img class="responsive-img social-link-img" alt="Pinterest Boards" src="img/logos/Pinterest-Logo-800x500.jpg" />
+          </a>
+        </div>
       </div>
     </div>
+    </div> <!-- Closing main-content-wrapper -->
 
     <footer class="footer">
-      <div class="container">
-        <ul class="bs-docs-footer-links text-muted">
+      <div class="footer-content-wrapper">
+        <ul>
           <li>© Copyright 2015 by Kevin Darty</li>
           <li>&middot;</li>
           <li><a href="http://www.KevinDarty.net">blog</a></li>
-          <li>&middot;</li>
-          <li><a href="http://plus.google.com/+KevinDarty/about">google+</a></li>
-          <li>&middot;</li>
-          <li><a href="https://twitter.com/kdarty">twitter</a></li>
           <li>&middot;</li>
           <li><a href="http://www.linkedin.com/in/kevindarty">LinkedIn</a></li>
         </ul>
@@ -147,14 +115,17 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-<script>
-  if (typeof mdc !== 'undefined') {
-    mdc.autoInit();
-  } else {
-    console.warn('MDC components not found. Auto-init skipped.');
-  }
-</script>
+    <script type="module" src="https://unpkg.com/@material/mwc-bundle@latest/mwc-bundle.js"></script>
+    <script>
+      const socialMenuButton = document.getElementById('socialMenuButton');
+      const socialMenu = document.getElementById('socialMenu');
+
+      if (socialMenuButton && socialMenu) {
+        socialMenu.anchor = socialMenuButton; // Ensure anchor is set
+        socialMenuButton.addEventListener('click', () => {
+          socialMenu.open = !socialMenu.open;
+        });
+      }
+    </script>
   </body>
 </html>
