@@ -397,6 +397,132 @@ section { padding-block: clamp(3rem, 6vw, 5rem); }
 
 .cta__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
 
+/* ---- Breadcrumbs (Material style) ------------------------------------- */
+.breadcrumbs { padding-top: 1.25rem; }
+.breadcrumbs ol {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; align-items: center;
+  font-size: .9rem;
+}
+.breadcrumbs li { display: inline-flex; align-items: center; color: var(--on-surface-variant); }
+.breadcrumbs li + li::before {
+  content: "›";
+  margin: 0 .5rem;
+  color: var(--outline);
+  font-size: 1.15em;
+  line-height: 1;
+}
+.breadcrumbs a {
+  color: var(--on-surface-variant);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: color .18s;
+}
+.breadcrumbs a:hover { color: var(--primary); text-decoration: underline; }
+.breadcrumbs li[aria-current="page"] { color: var(--on-surface); font-weight: 600; }
+
+/* ---- Streaming: episode tables ---------------------------------------- */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--outline-variant);
+  border-radius: 16px;
+  box-shadow: var(--shadow-1);
+  background: var(--surface);
+  -webkit-overflow-scrolling: touch;
+}
+.stream-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+  font-size: .95rem;
+}
+.stream-table thead th {
+  text-align: left;
+  background: var(--surface-container-high);
+  color: var(--on-surface);
+  font-weight: 600;
+  padding: .8rem 1rem;
+  border-bottom: 1px solid var(--outline-variant);
+  white-space: nowrap;
+}
+.stream-table td {
+  padding: .8rem 1rem;
+  border-bottom: 1px solid var(--outline-variant);
+  vertical-align: top;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+}
+.stream-table tbody tr:nth-child(even) { background: var(--surface-container-low); }
+.stream-table tbody tr:last-child td { border-bottom: 0; }
+.stream-table td:first-child { color: var(--on-surface); font-weight: 500; }
+
+/* ---- Streaming: article body ------------------------------------------ */
+.stream-prose > p,
+.stream-prose > ul,
+.stream-prose > h2,
+.stream-prose > h3 { max-width: 74ch; }
+.stream-prose > p { font-size: 1.05rem; }
+.stream-prose h2 {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 2.25rem 0 .5rem;
+}
+.stream-prose h3 { font-weight: 600; font-size: 1.12rem; margin: 1.6rem 0 .35rem; color: var(--on-surface); }
+.stream-prose em { color: var(--on-surface-variant); }
+.stream-prose ul { padding-left: 1.2rem; }
+.stream-prose li { margin: .35rem 0; }
+.stream-prose strong { color: var(--on-surface); }
+
+/* ---- Streaming: series list (category pages) -------------------------- */
+.series-list {
+  list-style: none; margin: 1.75rem 0 0; padding: 0;
+  border: 1px solid var(--outline-variant);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+}
+.series-item + .series-item { border-top: 1px solid var(--outline-variant); }
+.series-link {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem 1.25rem;
+  color: var(--on-surface);
+  transition: background-color .18s;
+}
+.series-link:hover { background: var(--surface-container-high); color: var(--on-surface); }
+.series-link__icon {
+  flex: none; display: grid; place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+}
+.series-link__icon svg { width: 24px; height: 24px; }
+.series-link__text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: .1rem; }
+.series-link__title { font-weight: 600; font-size: 1.05rem; }
+.series-link__sub { color: var(--on-surface-variant); font-size: .88rem; }
+.series-link__arrow { flex: none; color: var(--on-surface-variant); transition: color .18s, transform .18s; }
+.series-link:hover .series-link__arrow { color: var(--primary); transform: translateX(3px); }
+.series-link__arrow svg { width: 22px; height: 22px; display: block; }
+
+/* Placeholder ("coming soon") card */
+.card.is-soon { opacity: .62; }
+.card.is-soon:hover { transform: none; box-shadow: var(--shadow-1); border-color: var(--outline-variant); }
+.card.is-soon:hover .card__title { color: var(--on-surface); }
+.card__badge {
+  display: inline-block;
+  margin-top: .7rem;
+  padding: .22rem .65rem;
+  border-radius: 999px;
+  background: var(--surface-container-high);
+  color: var(--on-surface-variant);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
 .shop-closing {
   margin: 2rem 0 0;
   font-size: 1.12rem;
